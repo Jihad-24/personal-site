@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
      <link rel="stylesheet" href="CSS/index.css">
+     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
      <title>Jihad Hasan</title>
 </head>
 
@@ -25,16 +26,16 @@
           </nav>
           <div class="follow">
                <a href="https://www.facebook.com/fb.Jihad.Hasan" target="_blank" class="fab fa-facebook-f"></a>
-               <a href="https://www.instagram.com/mdjihad1221/" class="fab fa-instagram"></a>
-               <a href="https://www.linkedin.com/in/jihad-hasan/" class="fab fa-linkedin"></a>
-               <a href="https://github.com/Jihad-24" class="fab fa-github"></a>
+               <a href="https://www.instagram.com/mdjihad1221/" target="_blank"  class="fab fa-instagram"></a>
+               <a href="https://www.linkedin.com/in/jihad-hasan/" target="_blank"  class="fab fa-linkedin"></a>
+               <a href="https://github.com/Jihad-24" target="_blank"  class="fab fa-github"></a>
           </div>
      </header>
      <!-- header section ends here -->
      <!-- home section starts -->
      <section class="home" id="home">
           <div class="image">
-               <img src="Image/IMP.png" alt="" data-aos="fade-right" >
+               <img src="Image/IMP.png" alt="" data-aos="fade-right">
           </div>
           <div class="content">
                <h3 data-aos="fade-up">Hi, I am Jihad Hasan</h3>
@@ -42,7 +43,10 @@
                <p data-aos="fade-up">The stack I work on in web development is MERN Stack. You can hire me as fron-end
                     developer, back-end developer or full-stack developer</p>
                <!-- <a data-aos="fade-up" href="/Resume.pdf" class="btn">My Resume</a> -->
-               <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn" data-aos="fade-up">My Resume</a>
+              <div class="resume">
+               <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn" data-aos="fade-up">See Resume</a>
+               <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn" data-aos="fade-up" download>Download Resume</a>
+              </div>
           </div>
      </section>
      <!-- home section ends -->
@@ -62,8 +66,10 @@
                     <h3 data-aos="zoom-in"><span>Age : </span>21 Years old</h3>
                     <!-- <h3 data-aos="zoom-in"><span>Experience : </span>1+ Years</h3> -->
                </div>
-               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn" data-aos="fade-up">My
-                    Resume</a>
+               <div class="resume">
+                    <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn" data-aos="fade-up">See Resume</a>
+                    <a href="Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn" data-aos="fade-up" download>Download Resume</a>
+                   </div>
           </div>
           <div class="skills">
                <h1 class="heading" data-aos="fade-up">
@@ -83,21 +89,21 @@
                          <h3><span>Tailwind</span><span>100%</span></h3>
                     </div>
                     <div class="bar" data-aos="fade-left">
-                         <h3><span>JavaScript</span><span>60%</span></h3>
+                         <h3><span>JavaScript</span><span>80%</span></h3>
                     </div>
                     <div class="bar" data-aos="fade-right">
-                         <h3><span>ES6</span><span>60%</span></h3>
+                         <h3><span>ES6</span><span>80%</span></h3>
                     </div>
                     <div class="bar" data-aos="fade-left">
                          <h3><span>JSON</span><span>80%</span></h3>
                     </div>
 
                     <div class="bar" data-aos="fade-right">
-                         <h3><span>Express</span><span>70%</span></h3>
+                         <h3><span>Express</span><span>100%</span></h3>
                     </div>
 
                     <div class="bar" data-aos="fade-left">
-                         <h3><span>Node.js</span><span>70%</span></h3>
+                         <h3><span>Node.js</span><span>80%</span></h3>
                     </div>
                     <div class="bar" data-aos="fade-right">
                          <h3><span>MongoDB</span><span>80%</span></h3>
@@ -158,7 +164,7 @@
                     <p>You can hire me for front-end development</p>
                </div>
                <div class="box" data-aos="zoom-in">
-                    <img src="Image/backend.png"/>
+                    <img src="Image/backend.png" />
                     <h3>Back-End development</h3>
                     <p>You can hire me for back-end development</p>
                </div>
@@ -268,17 +274,17 @@
      <!-- portfolio section ends here -->
      <section class="contact" id="contact">
           <h1 class="heading" data-aos="fade-up"> <span>contact me</span> </h1>
-          <form action="" method="post">
+          <form id="contact-form" action="" method="post">
                <div class="flex">
-                    <input data-aos="fade-right" type="text" name="name" placeholder="enter your name" class="box"
-                         required>
-                    <input input data-aos="fade-left" type="email" name="email" placeholder="enter your email"
+                    <input data-aos="fade-right" type="text" id="name" name="name" placeholder="enter your name"
                          class="box" required>
+                    <input input data-aos="fade-left" type="email" id="email" name="email"
+                         placeholder="enter your email" class="box" required>
                </div>
-               <input data-aos="fade-up" type="number" min="0" name="number" placeholder="enter your number" class="box"
-                    required>
-               <textarea data-aos="fade-up" name="message" class="box" required placeholder="enter your message"
-                    cols="30" rows="10"></textarea>
+               <input data-aos="fade-up" type="number" min="0" id="number" name="number" placeholder="enter your number"
+                    class="box" required>
+               <textarea data-aos="fade-up" id="message" name="message" class="box" required
+                    placeholder="enter your message" cols="30" rows="10"></textarea>
                <input type="submit" data-aos="zoom-in" value="send message" name="send" class="btn">
           </form>
           <div class="box-container">

@@ -195,6 +195,12 @@ section {
    border-radius: 100%;
 }
 
+.resume {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+}
+
 .home .content {
    flex: 1 1 40rem;
 }
